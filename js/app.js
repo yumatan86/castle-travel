@@ -41,3 +41,36 @@ const map = L.map("map").setView([36.5, 137.5], 5);
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
+
+// =========================
+// 城のマーカー表示
+// =========================
+
+// JSONファイルから城データを読み込む
+fetch("data/castle.json")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("城データの読み込みに失敗しました");
+    }
+    return response.json();
+  })
+  .then((castles) => {
+
+    // 城データを1件ずつ処理
+    castles.forEach((castle) => {
+
+      // 緯度・経度を使ってマーカーを配置
+      L.marker([castle.latitude, castle.longitude])
+        .addTo(map)
+        .bindPopup(
+          `<strong>${castle.name}</strong><br>${castle.prefecture}<br>${castle.category}`
+        );
+
+    });
+
+    console.log(`${castles.length}城のマーカーを表示しました`);
+
+  })
+  .catch((error) => {
+    console.error("城データの読み込みエラー:", error);
+  });
