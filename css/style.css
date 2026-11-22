@@ -400,6 +400,7 @@ main p {
 
 .castle-list-actions {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 12px;
   white-space: nowrap;
@@ -408,6 +409,36 @@ main p {
 
 .castle-list-actions button {
   width: auto;
+}
+
+.castle-list-visit-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  border: 1px solid #D8DDE2;
+  border-radius: 999px;
+  background: #F2F4F6;
+  color: #535D68;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.castle-list-visit-status[data-state="visited"] {
+  border-color: #C5D6E8;
+  background: #E8EFF6;
+  color: #2F5278;
+}
+
+.castle-list-visit-status--zoku[data-state="visited"] {
+  border-color: #EBCDB7;
+  background: #FAEDE3;
+  color: #8A4B23;
+}
+
+.castle-list-visit-icon {
+  width: 1em;
+  text-align: center;
 }
 
 /* =========================

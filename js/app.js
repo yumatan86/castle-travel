@@ -222,7 +222,14 @@ function renderCastleList() {
     item.querySelector(".castle-list-name").textContent = castle.name;
     item.querySelector(".castle-list-location").textContent = `${castle.prefecture}${castle.municipality}`;
     item.querySelector(".castle-list-category").textContent = `${castle.category}・第${castle.official_number}番`;
-    item.querySelector(".castle-list-visit-status").textContent = state === "visited" ? "訪問済み" : "未訪問";
+    const badge = item.querySelector(".castle-list-visit-status");
+    const isVisited = state === "visited";
+    badge.dataset.state = state;
+    if (isVisited && castle.category === "続日本100名城") {
+      badge.classList.add("castle-list-visit-status--zoku");
+    }
+    badge.querySelector(".castle-list-visit-icon").textContent = isVisited ? "✓" : "○";
+    badge.querySelector(".castle-list-visit-label").textContent = isVisited ? "訪問済み" : "未訪問";
     const button = item.querySelector("button");
     button.setAttribute("aria-label", `${castle.name}を地図で見る`);
     button.addEventListener("click", () => {
