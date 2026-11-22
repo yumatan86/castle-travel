@@ -330,10 +330,10 @@ body {
 
 .castle-marker--visited-100 .castle-marker-dot {
   background: var(--color-blue);
-  border-color: var(--color-blue);
+  border-color: #2F5278;
 }
 
 .castle-marker--visited-zoku .castle-marker-dot {
   background: var(--color-orange);
-  border-color: var(--color-orange);
+  border-color: #8A4B23;
 }
