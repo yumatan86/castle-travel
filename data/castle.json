@@ -1,0 +1,2002 @@
+[
+  {
+    "id": "C001",
+    "name": "根室半島チャシ跡群",
+    "category": "日本100名城",
+    "official_number": 1,
+    "prefecture": "北海道",
+    "municipality": "根室市",
+    "latitude": 43.38861,
+    "longitude": 145.7825
+  },
+  {
+    "id": "C002",
+    "name": "五稜郭",
+    "category": "日本100名城",
+    "official_number": 2,
+    "prefecture": "北海道",
+    "municipality": "函館市",
+    "latitude": 41.7969,
+    "longitude": 140.756961
+  },
+  {
+    "id": "C003",
+    "name": "松前城",
+    "category": "日本100名城",
+    "official_number": 3,
+    "prefecture": "北海道",
+    "municipality": "松前郡松前町",
+    "latitude": 41.430325,
+    "longitude": 140.1086
+  },
+  {
+    "id": "C004",
+    "name": "弘前城",
+    "category": "日本100名城",
+    "official_number": 4,
+    "prefecture": "青森県",
+    "municipality": "弘前市",
+    "latitude": 40.608036,
+    "longitude": 140.463806
+  },
+  {
+    "id": "C005",
+    "name": "根城",
+    "category": "日本100名城",
+    "official_number": 5,
+    "prefecture": "青森県",
+    "municipality": "八戸市",
+    "latitude": 40.506189,
+    "longitude": 141.459611
+  },
+  {
+    "id": "C006",
+    "name": "盛岡城",
+    "category": "日本100名城",
+    "official_number": 6,
+    "prefecture": "岩手県",
+    "municipality": "盛岡市",
+    "latitude": 39.69995,
+    "longitude": 141.15011
+  },
+  {
+    "id": "C007",
+    "name": "多賀城",
+    "category": "日本100名城",
+    "official_number": 7,
+    "prefecture": "宮城県",
+    "municipality": "多賀城市",
+    "latitude": 38.3067,
+    "longitude": 140.9883
+  },
+  {
+    "id": "C008",
+    "name": "仙台城",
+    "category": "日本100名城",
+    "official_number": 8,
+    "prefecture": "宮城県",
+    "municipality": "仙台市",
+    "latitude": 38.252478,
+    "longitude": 140.856156
+  },
+  {
+    "id": "C009",
+    "name": "久保田城",
+    "category": "日本100名城",
+    "official_number": 9,
+    "prefecture": "秋田県",
+    "municipality": "秋田市",
+    "latitude": 39.723481,
+    "longitude": 140.123242
+  },
+  {
+    "id": "C010",
+    "name": "山形城",
+    "category": "日本100名城",
+    "official_number": 10,
+    "prefecture": "山形県",
+    "municipality": "山形市",
+    "latitude": 38.2556,
+    "longitude": 140.3281
+  },
+  {
+    "id": "C011",
+    "name": "二本松城",
+    "category": "日本100名城",
+    "official_number": 11,
+    "prefecture": "福島県",
+    "municipality": "二本松市",
+    "latitude": 37.599642,
+    "longitude": 140.427986
+  },
+  {
+    "id": "C012",
+    "name": "会津若松城",
+    "category": "日本100名城",
+    "official_number": 12,
+    "prefecture": "福島県",
+    "municipality": "会津若松市",
+    "latitude": 37.487778,
+    "longitude": 139.929722
+  },
+  {
+    "id": "C013",
+    "name": "白河小峰城",
+    "category": "日本100名城",
+    "official_number": 13,
+    "prefecture": "福島県",
+    "municipality": "白河市",
+    "latitude": 37.1326,
+    "longitude": 140.2136
+  },
+  {
+    "id": "C014",
+    "name": "水戸城",
+    "category": "日本100名城",
+    "official_number": 14,
+    "prefecture": "茨城県",
+    "municipality": "水戸市",
+    "latitude": 36.372778,
+    "longitude": 140.478333
+  },
+  {
+    "id": "C015",
+    "name": "足利氏館",
+    "category": "日本100名城",
+    "official_number": 15,
+    "prefecture": "栃木県",
+    "municipality": "足利市",
+    "latitude": 36.337528,
+    "longitude": 139.45225
+  },
+  {
+    "id": "C016",
+    "name": "箕輪城",
+    "category": "日本100名城",
+    "official_number": 16,
+    "prefecture": "群馬県",
+    "municipality": "高崎市",
+    "latitude": 36.40495,
+    "longitude": 138.950958
+  },
+  {
+    "id": "C017",
+    "name": "金山城",
+    "category": "日本100名城",
+    "official_number": 17,
+    "prefecture": "群馬県",
+    "municipality": "太田市",
+    "latitude": 36.317778,
+    "longitude": 139.377472
+  },
+  {
+    "id": "C018",
+    "name": "鉢形城",
+    "category": "日本100名城",
+    "official_number": 18,
+    "prefecture": "埼玉県",
+    "municipality": "大里郡寄居町",
+    "latitude": 36.1092,
+    "longitude": 139.196
+  },
+  {
+    "id": "C019",
+    "name": "川越城",
+    "category": "日本100名城",
+    "official_number": 19,
+    "prefecture": "埼玉県",
+    "municipality": "川越市",
+    "latitude": 35.924514,
+    "longitude": 139.491503
+  },
+  {
+    "id": "C020",
+    "name": "佐倉城",
+    "category": "日本100名城",
+    "official_number": 20,
+    "prefecture": "千葉県",
+    "municipality": "佐倉市",
+    "latitude": 35.721989,
+    "longitude": 140.216717
+  },
+  {
+    "id": "C021",
+    "name": "江戸城",
+    "category": "日本100名城",
+    "official_number": 21,
+    "prefecture": "東京都",
+    "municipality": "千代田区",
+    "latitude": 35.6883,
+    "longitude": 139.7544
+  },
+  {
+    "id": "C022",
+    "name": "八王子城",
+    "category": "日本100名城",
+    "official_number": 22,
+    "prefecture": "東京都",
+    "municipality": "八王子市",
+    "latitude": 35.65297,
+    "longitude": 139.252153
+  },
+  {
+    "id": "C023",
+    "name": "小田原城",
+    "category": "日本100名城",
+    "official_number": 23,
+    "prefecture": "神奈川県",
+    "municipality": "小田原市",
+    "latitude": 35.250833,
+    "longitude": 139.153611
+  },
+  {
+    "id": "C024",
+    "name": "武田氏館",
+    "category": "日本100名城",
+    "official_number": 24,
+    "prefecture": "山梨県",
+    "municipality": "甲府市",
+    "latitude": 35.686864,
+    "longitude": 138.577464
+  },
+  {
+    "id": "C025",
+    "name": "甲府城",
+    "category": "日本100名城",
+    "official_number": 25,
+    "prefecture": "山梨県",
+    "municipality": "甲府市",
+    "latitude": 35.665289,
+    "longitude": 138.571339
+  },
+  {
+    "id": "C026",
+    "name": "松代城",
+    "category": "日本100名城",
+    "official_number": 26,
+    "prefecture": "長野県",
+    "municipality": "長野市",
+    "latitude": 36.566108,
+    "longitude": 138.196006
+  },
+  {
+    "id": "C027",
+    "name": "上田城",
+    "category": "日本100名城",
+    "official_number": 27,
+    "prefecture": "長野県",
+    "municipality": "上田市",
+    "latitude": 36.403922,
+    "longitude": 138.244794
+  },
+  {
+    "id": "C028",
+    "name": "小諸城",
+    "category": "日本100名城",
+    "official_number": 28,
+    "prefecture": "長野県",
+    "municipality": "小諸市",
+    "latitude": 36.327336,
+    "longitude": 138.417247
+  },
+  {
+    "id": "C029",
+    "name": "松本城",
+    "category": "日本100名城",
+    "official_number": 29,
+    "prefecture": "長野県",
+    "municipality": "松本市",
+    "latitude": 36.2391,
+    "longitude": 137.969119
+  },
+  {
+    "id": "C030",
+    "name": "高遠城",
+    "category": "日本100名城",
+    "official_number": 30,
+    "prefecture": "長野県",
+    "municipality": "伊那市",
+    "latitude": 35.833078,
+    "longitude": 138.062803
+  },
+  {
+    "id": "C031",
+    "name": "新発田城",
+    "category": "日本100名城",
+    "official_number": 31,
+    "prefecture": "新潟県",
+    "municipality": "新発田市",
+    "latitude": 37.955467,
+    "longitude": 139.325408
+  },
+  {
+    "id": "C032",
+    "name": "春日山城",
+    "category": "日本100名城",
+    "official_number": 32,
+    "prefecture": "新潟県",
+    "municipality": "上越市",
+    "latitude": 37.146689,
+    "longitude": 138.205553
+  },
+  {
+    "id": "C033",
+    "name": "高岡城",
+    "category": "日本100名城",
+    "official_number": 33,
+    "prefecture": "富山県",
+    "municipality": "高岡市",
+    "latitude": 36.749167,
+    "longitude": 137.020556
+  },
+  {
+    "id": "C034",
+    "name": "七尾城",
+    "category": "日本100名城",
+    "official_number": 34,
+    "prefecture": "石川県",
+    "municipality": "七尾市",
+    "latitude": 37.009036,
+    "longitude": 136.983917
+  },
+  {
+    "id": "C035",
+    "name": "金沢城",
+    "category": "日本100名城",
+    "official_number": 35,
+    "prefecture": "石川県",
+    "municipality": "金沢市",
+    "latitude": 36.5643,
+    "longitude": 136.6592
+  },
+  {
+    "id": "C036",
+    "name": "丸岡城",
+    "category": "日本100名城",
+    "official_number": 36,
+    "prefecture": "福井県",
+    "municipality": "坂井市",
+    "latitude": 36.152422,
+    "longitude": 136.272144
+  },
+  {
+    "id": "C037",
+    "name": "一乗谷城",
+    "category": "日本100名城",
+    "official_number": 37,
+    "prefecture": "福井県",
+    "municipality": "福井市",
+    "latitude": 35.999492,
+    "longitude": 136.295564
+  },
+  {
+    "id": "C038",
+    "name": "岩村城",
+    "category": "日本100名城",
+    "official_number": 38,
+    "prefecture": "岐阜県",
+    "municipality": "恵那市",
+    "latitude": 35.359931,
+    "longitude": 137.451022
+  },
+  {
+    "id": "C039",
+    "name": "岐阜城",
+    "category": "日本100名城",
+    "official_number": 39,
+    "prefecture": "岐阜県",
+    "municipality": "岐阜市",
+    "latitude": 35.434072,
+    "longitude": 136.782214
+  },
+  {
+    "id": "C040",
+    "name": "山中城",
+    "category": "日本100名城",
+    "official_number": 40,
+    "prefecture": "静岡県",
+    "municipality": "三島市",
+    "latitude": 35.156397,
+    "longitude": 138.992419
+  },
+  {
+    "id": "C041",
+    "name": "駿府城",
+    "category": "日本100名城",
+    "official_number": 41,
+    "prefecture": "静岡県",
+    "municipality": "静岡市",
+    "latitude": 34.97917,
+    "longitude": 138.38333
+  },
+  {
+    "id": "C042",
+    "name": "掛川城",
+    "category": "日本100名城",
+    "official_number": 42,
+    "prefecture": "静岡県",
+    "municipality": "掛川市",
+    "latitude": 34.775417,
+    "longitude": 138.014733
+  },
+  {
+    "id": "C043",
+    "name": "犬山城",
+    "category": "日本100名城",
+    "official_number": 43,
+    "prefecture": "愛知県",
+    "municipality": "犬山市",
+    "latitude": 35.388322,
+    "longitude": 136.939261
+  },
+  {
+    "id": "C044",
+    "name": "名古屋城",
+    "category": "日本100名城",
+    "official_number": 44,
+    "prefecture": "愛知県",
+    "municipality": "名古屋市",
+    "latitude": 35.185556,
+    "longitude": 136.898611
+  },
+  {
+    "id": "C045",
+    "name": "岡崎城",
+    "category": "日本100名城",
+    "official_number": 45,
+    "prefecture": "愛知県",
+    "municipality": "岡崎市",
+    "latitude": 34.956389,
+    "longitude": 137.158889
+  },
+  {
+    "id": "C046",
+    "name": "長篠城",
+    "category": "日本100名城",
+    "official_number": 46,
+    "prefecture": "愛知県",
+    "municipality": "新城市",
+    "latitude": 34.922817,
+    "longitude": 137.559847
+  },
+  {
+    "id": "C047",
+    "name": "伊賀上野城",
+    "category": "日本100名城",
+    "official_number": 47,
+    "prefecture": "三重県",
+    "municipality": "伊賀市",
+    "latitude": 34.7701,
+    "longitude": 136.1272
+  },
+  {
+    "id": "C048",
+    "name": "松阪城",
+    "category": "日本100名城",
+    "official_number": 48,
+    "prefecture": "三重県",
+    "municipality": "松阪市",
+    "latitude": 34.7092,
+    "longitude": 136.5258
+  },
+  {
+    "id": "C049",
+    "name": "小谷城",
+    "category": "日本100名城",
+    "official_number": 49,
+    "prefecture": "滋賀県",
+    "municipality": "長浜市",
+    "latitude": 35.459359,
+    "longitude": 136.277072
+  },
+  {
+    "id": "C050",
+    "name": "彦根城",
+    "category": "日本100名城",
+    "official_number": 50,
+    "prefecture": "滋賀県",
+    "municipality": "彦根市",
+    "latitude": 35.276422,
+    "longitude": 136.251889
+  },
+  {
+    "id": "C051",
+    "name": "安土城",
+    "category": "日本100名城",
+    "official_number": 51,
+    "prefecture": "滋賀県",
+    "municipality": "近江八幡市",
+    "latitude": 35.155914,
+    "longitude": 136.139408
+  },
+  {
+    "id": "C052",
+    "name": "観音寺城",
+    "category": "日本100名城",
+    "official_number": 52,
+    "prefecture": "滋賀県",
+    "municipality": "近江八幡市",
+    "latitude": 35.146027,
+    "longitude": 136.157778
+  },
+  {
+    "id": "C053",
+    "name": "二条城",
+    "category": "日本100名城",
+    "official_number": 53,
+    "prefecture": "京都府",
+    "municipality": "京都市",
+    "latitude": 35.014167,
+    "longitude": 135.7475
+  },
+  {
+    "id": "C054",
+    "name": "大阪城",
+    "category": "日本100名城",
+    "official_number": 54,
+    "prefecture": "大阪府",
+    "municipality": "大阪市",
+    "latitude": 34.687222,
+    "longitude": 135.525833
+  },
+  {
+    "id": "C055",
+    "name": "千早城",
+    "category": "日本100名城",
+    "official_number": 55,
+    "prefecture": "大阪府",
+    "municipality": "南河内郡千早赤阪村",
+    "latitude": 34.417225,
+    "longitude": 135.651197
+  },
+  {
+    "id": "C056",
+    "name": "竹田城",
+    "category": "日本100名城",
+    "official_number": 56,
+    "prefecture": "兵庫県",
+    "municipality": "朝来市",
+    "latitude": 35.3,
+    "longitude": 134.828889
+  },
+  {
+    "id": "C057",
+    "name": "篠山城",
+    "category": "日本100名城",
+    "official_number": 57,
+    "prefecture": "兵庫県",
+    "municipality": "丹波篠山市",
+    "latitude": 35.072822,
+    "longitude": 135.218253
+  },
+  {
+    "id": "C058",
+    "name": "明石城",
+    "category": "日本100名城",
+    "official_number": 58,
+    "prefecture": "兵庫県",
+    "municipality": "明石市",
+    "latitude": 34.652797,
+    "longitude": 134.991797
+  },
+  {
+    "id": "C059",
+    "name": "姫路城",
+    "category": "日本100名城",
+    "official_number": 59,
+    "prefecture": "兵庫県",
+    "municipality": "姫路市",
+    "latitude": 34.839378,
+    "longitude": 134.694097
+  },
+  {
+    "id": "C060",
+    "name": "赤穂城",
+    "category": "日本100名城",
+    "official_number": 60,
+    "prefecture": "兵庫県",
+    "municipality": "赤穂市",
+    "latitude": 34.745669,
+    "longitude": 134.388983
+  },
+  {
+    "id": "C061",
+    "name": "高取城",
+    "category": "日本100名城",
+    "official_number": 61,
+    "prefecture": "奈良県",
+    "municipality": "高市郡高取町",
+    "latitude": 34.429442,
+    "longitude": 135.826825
+  },
+  {
+    "id": "C062",
+    "name": "和歌山城",
+    "category": "日本100名城",
+    "official_number": 62,
+    "prefecture": "和歌山県",
+    "municipality": "和歌山市",
+    "latitude": 34.23,
+    "longitude": 135.17
+  },
+  {
+    "id": "C063",
+    "name": "鳥取城",
+    "category": "日本100名城",
+    "official_number": 63,
+    "prefecture": "鳥取県",
+    "municipality": "鳥取市",
+    "latitude": 35.51,
+    "longitude": 134.24
+  },
+  {
+    "id": "C064",
+    "name": "松江城",
+    "category": "日本100名城",
+    "official_number": 64,
+    "prefecture": "島根県",
+    "municipality": "松江市",
+    "latitude": 35.475139,
+    "longitude": 133.050694
+  },
+  {
+    "id": "C065",
+    "name": "月山富田城",
+    "category": "日本100名城",
+    "official_number": 65,
+    "prefecture": "島根県",
+    "municipality": "安来市",
+    "latitude": 35.360967,
+    "longitude": 133.184875
+  },
+  {
+    "id": "C066",
+    "name": "津和野城",
+    "category": "日本100名城",
+    "official_number": 66,
+    "prefecture": "島根県",
+    "municipality": "鹿足郡津和野町",
+    "latitude": 34.461108,
+    "longitude": 131.763814
+  },
+  {
+    "id": "C067",
+    "name": "津山城",
+    "category": "日本100名城",
+    "official_number": 67,
+    "prefecture": "岡山県",
+    "municipality": "津山市",
+    "latitude": 35.0628,
+    "longitude": 134.005
+  },
+  {
+    "id": "C068",
+    "name": "備中松山城",
+    "category": "日本100名城",
+    "official_number": 68,
+    "prefecture": "岡山県",
+    "municipality": "高梁市",
+    "latitude": 34.809089,
+    "longitude": 133.622325
+  },
+  {
+    "id": "C069",
+    "name": "鬼ノ城",
+    "category": "日本100名城",
+    "official_number": 69,
+    "prefecture": "岡山県",
+    "municipality": "総社市",
+    "latitude": 34.727694,
+    "longitude": 133.767778
+  },
+  {
+    "id": "C070",
+    "name": "岡山城",
+    "category": "日本100名城",
+    "official_number": 70,
+    "prefecture": "岡山県",
+    "municipality": "岡山市",
+    "latitude": 34.6653,
+    "longitude": 133.9361
+  },
+  {
+    "id": "C071",
+    "name": "福山城",
+    "category": "日本100名城",
+    "official_number": 71,
+    "prefecture": "広島県",
+    "municipality": "福山市",
+    "latitude": 34.491039,
+    "longitude": 133.361122
+  },
+  {
+    "id": "C072",
+    "name": "郡山城",
+    "category": "日本100名城",
+    "official_number": 72,
+    "prefecture": "広島県",
+    "municipality": "安芸高田市",
+    "latitude": 34.674286,
+    "longitude": 132.709589
+  },
+  {
+    "id": "C073",
+    "name": "広島城",
+    "category": "日本100名城",
+    "official_number": 73,
+    "prefecture": "広島県",
+    "municipality": "広島市",
+    "latitude": 34.40275,
+    "longitude": 132.45903
+  },
+  {
+    "id": "C074",
+    "name": "岩国城",
+    "category": "日本100名城",
+    "official_number": 74,
+    "prefecture": "山口県",
+    "municipality": "岩国市",
+    "latitude": 34.175256,
+    "longitude": 132.174231
+  },
+  {
+    "id": "C075",
+    "name": "萩城",
+    "category": "日本100名城",
+    "official_number": 75,
+    "prefecture": "山口県",
+    "municipality": "萩市",
+    "latitude": 34.417592,
+    "longitude": 131.382478
+  },
+  {
+    "id": "C076",
+    "name": "徳島城",
+    "category": "日本100名城",
+    "official_number": 76,
+    "prefecture": "徳島県",
+    "municipality": "徳島市",
+    "latitude": 34.075192,
+    "longitude": 134.555275
+  },
+  {
+    "id": "C077",
+    "name": "高松城",
+    "category": "日本100名城",
+    "official_number": 77,
+    "prefecture": "香川県",
+    "municipality": "高松市",
+    "latitude": 34.35003,
+    "longitude": 134.05039
+  },
+  {
+    "id": "C078",
+    "name": "丸亀城",
+    "category": "日本100名城",
+    "official_number": 78,
+    "prefecture": "香川県",
+    "municipality": "丸亀市",
+    "latitude": 34.286191,
+    "longitude": 133.800194
+  },
+  {
+    "id": "C079",
+    "name": "今治城",
+    "category": "日本100名城",
+    "official_number": 79,
+    "prefecture": "愛媛県",
+    "municipality": "今治市",
+    "latitude": 34.063336,
+    "longitude": 133.006806
+  },
+  {
+    "id": "C080",
+    "name": "湯築城",
+    "category": "日本100名城",
+    "official_number": 80,
+    "prefecture": "愛媛県",
+    "municipality": "松山市",
+    "latitude": 33.848108,
+    "longitude": 132.786742
+  },
+  {
+    "id": "C081",
+    "name": "松山城",
+    "category": "日本100名城",
+    "official_number": 81,
+    "prefecture": "愛媛県",
+    "municipality": "松山市",
+    "latitude": 33.845539,
+    "longitude": 132.765722
+  },
+  {
+    "id": "C082",
+    "name": "大洲城",
+    "category": "日本100名城",
+    "official_number": 82,
+    "prefecture": "愛媛県",
+    "municipality": "大洲市",
+    "latitude": 33.509539,
+    "longitude": 132.541131
+  },
+  {
+    "id": "C083",
+    "name": "宇和島城",
+    "category": "日本100名城",
+    "official_number": 83,
+    "prefecture": "愛媛県",
+    "municipality": "宇和島市",
+    "latitude": 33.219478,
+    "longitude": 132.565236
+  },
+  {
+    "id": "C084",
+    "name": "高知城",
+    "category": "日本100名城",
+    "official_number": 84,
+    "prefecture": "高知県",
+    "municipality": "高知市",
+    "latitude": 33.560703,
+    "longitude": 133.531539
+  },
+  {
+    "id": "C085",
+    "name": "福岡城",
+    "category": "日本100名城",
+    "official_number": 85,
+    "prefecture": "福岡県",
+    "municipality": "福岡市",
+    "latitude": 33.584381,
+    "longitude": 130.383103
+  },
+  {
+    "id": "C086",
+    "name": "大野城",
+    "category": "日本100名城",
+    "official_number": 86,
+    "prefecture": "福岡県",
+    "municipality": "糟屋郡宇美町、太宰府市、大野城市",
+    "latitude": 33.538528,
+    "longitude": 130.507333
+  },
+  {
+    "id": "C087",
+    "name": "名護屋城",
+    "category": "日本100名城",
+    "official_number": 87,
+    "prefecture": "佐賀県",
+    "municipality": "唐津市",
+    "latitude": 33.530033,
+    "longitude": 129.869375
+  },
+  {
+    "id": "C088",
+    "name": "吉野ヶ里",
+    "category": "日本100名城",
+    "official_number": 88,
+    "prefecture": "佐賀県",
+    "municipality": "神崎郡吉野ヶ里町",
+    "latitude": 33.32361,
+    "longitude": 130.390694
+  },
+  {
+    "id": "C089",
+    "name": "佐賀城",
+    "category": "日本100名城",
+    "official_number": 89,
+    "prefecture": "佐賀県",
+    "municipality": "佐賀市",
+    "latitude": 33.245744,
+    "longitude": 130.302153
+  },
+  {
+    "id": "C090",
+    "name": "平戸城",
+    "category": "日本100名城",
+    "official_number": 90,
+    "prefecture": "長崎県",
+    "municipality": "平戸市",
+    "latitude": 33.368575,
+    "longitude": 129.557567
+  },
+  {
+    "id": "C091",
+    "name": "島原城",
+    "category": "日本100名城",
+    "official_number": 91,
+    "prefecture": "長崎県",
+    "municipality": "島原市",
+    "latitude": 32.789217,
+    "longitude": 130.367264
+  },
+  {
+    "id": "C092",
+    "name": "熊本城",
+    "category": "日本100名城",
+    "official_number": 92,
+    "prefecture": "熊本県",
+    "municipality": "熊本市",
+    "latitude": 32.806028,
+    "longitude": 130.705897
+  },
+  {
+    "id": "C093",
+    "name": "人吉城",
+    "category": "日本100名城",
+    "official_number": 93,
+    "prefecture": "熊本県",
+    "municipality": "人吉市",
+    "latitude": 32.211083,
+    "longitude": 130.766492
+  },
+  {
+    "id": "C094",
+    "name": "大分府内城",
+    "category": "日本100名城",
+    "official_number": 94,
+    "prefecture": "大分県",
+    "municipality": "大分市",
+    "latitude": 33.240642,
+    "longitude": 131.611433
+  },
+  {
+    "id": "C095",
+    "name": "岡城",
+    "category": "日本100名城",
+    "official_number": 95,
+    "prefecture": "大分県",
+    "municipality": "竹田市",
+    "latitude": 32.969217,
+    "longitude": 131.408069
+  },
+  {
+    "id": "C096",
+    "name": "飫肥城",
+    "category": "日本100名城",
+    "official_number": 96,
+    "prefecture": "宮崎県",
+    "municipality": "日南市",
+    "latitude": 31.629106,
+    "longitude": 131.350303
+  },
+  {
+    "id": "C097",
+    "name": "鹿児島城",
+    "category": "日本100名城",
+    "official_number": 97,
+    "prefecture": "鹿児島県",
+    "municipality": "鹿児島市",
+    "latitude": 31.59825,
+    "longitude": 130.554414
+  },
+  {
+    "id": "C098",
+    "name": "今帰仁城",
+    "category": "日本100名城",
+    "official_number": 98,
+    "prefecture": "沖縄県",
+    "municipality": "国頭郡今帰仁村",
+    "latitude": 26.690778,
+    "longitude": 127.929778
+  },
+  {
+    "id": "C099",
+    "name": "中城城",
+    "category": "日本100名城",
+    "official_number": 99,
+    "prefecture": "沖縄県",
+    "municipality": "中頭郡中城村",
+    "latitude": 26.284194,
+    "longitude": 127.801361
+  },
+  {
+    "id": "C100",
+    "name": "首里城",
+    "category": "日本100名城",
+    "official_number": 100,
+    "prefecture": "沖縄県",
+    "municipality": "那覇市",
+    "latitude": 26.217031,
+    "longitude": 127.719475
+  },
+  {
+    "id": "C101",
+    "name": "志苔館",
+    "category": "続日本100名城",
+    "official_number": 101,
+    "prefecture": "北海道",
+    "municipality": "函館市",
+    "latitude": 41.765722,
+    "longitude": 140.822389
+  },
+  {
+    "id": "C102",
+    "name": "上ノ国勝山館",
+    "category": "続日本100名城",
+    "official_number": 102,
+    "prefecture": "北海道",
+    "municipality": "檜山郡上ノ国町",
+    "latitude": 41.80083,
+    "longitude": 140.09944
+  },
+  {
+    "id": "C103",
+    "name": "浪岡城",
+    "category": "続日本100名城",
+    "official_number": 103,
+    "prefecture": "青森県",
+    "municipality": "青森市",
+    "latitude": 40.71694,
+    "longitude": 140.60444
+  },
+  {
+    "id": "C104",
+    "name": "九戸城",
+    "category": "続日本100名城",
+    "official_number": 104,
+    "prefecture": "岩手県",
+    "municipality": "二戸市",
+    "latitude": 40.267414,
+    "longitude": 141.304344
+  },
+  {
+    "id": "C105",
+    "name": "白石城",
+    "category": "続日本100名城",
+    "official_number": 105,
+    "prefecture": "宮城県",
+    "municipality": "白石市",
+    "latitude": 38.0026,
+    "longitude": 140.6171
+  },
+  {
+    "id": "C106",
+    "name": "脇本城",
+    "category": "続日本100名城",
+    "official_number": 106,
+    "prefecture": "秋田県",
+    "municipality": "男鹿市",
+    "latitude": 39.9025,
+    "longitude": 139.8892
+  },
+  {
+    "id": "C107",
+    "name": "秋田城",
+    "category": "続日本100名城",
+    "official_number": 107,
+    "prefecture": "秋田県",
+    "municipality": "秋田市",
+    "latitude": 39.740259,
+    "longitude": 140.081342
+  },
+  {
+    "id": "C108",
+    "name": "鶴ヶ岡城",
+    "category": "続日本100名城",
+    "official_number": 108,
+    "prefecture": "山形県",
+    "municipality": "鶴岡市",
+    "latitude": 38.728167,
+    "longitude": 139.825417
+  },
+  {
+    "id": "C109",
+    "name": "米沢城",
+    "category": "続日本100名城",
+    "official_number": 109,
+    "prefecture": "山形県",
+    "municipality": "米沢市",
+    "latitude": 37.909306,
+    "longitude": 140.104083
+  },
+  {
+    "id": "C110",
+    "name": "三春城",
+    "category": "続日本100名城",
+    "official_number": 110,
+    "prefecture": "福島県",
+    "municipality": "田村郡三春町",
+    "latitude": 37.442556,
+    "longitude": 140.4965
+  },
+  {
+    "id": "C111",
+    "name": "向羽黒山城",
+    "category": "続日本100名城",
+    "official_number": 111,
+    "prefecture": "福島県",
+    "municipality": "大沼郡会津美里町",
+    "latitude": 37.445389,
+    "longitude": 139.9
+  },
+  {
+    "id": "C112",
+    "name": "笠間城",
+    "category": "続日本100名城",
+    "official_number": 112,
+    "prefecture": "茨城県",
+    "municipality": "笠間市",
+    "latitude": 36.382486,
+    "longitude": 140.267481
+  },
+  {
+    "id": "C113",
+    "name": "土浦城",
+    "category": "続日本100名城",
+    "official_number": 113,
+    "prefecture": "茨城県",
+    "municipality": "土浦市",
+    "latitude": 36.085103,
+    "longitude": 140.198147
+  },
+  {
+    "id": "C114",
+    "name": "唐沢山城",
+    "category": "続日本100名城",
+    "official_number": 114,
+    "prefecture": "栃木県",
+    "municipality": "佐野市",
+    "latitude": 36.353639,
+    "longitude": 139.600944
+  },
+  {
+    "id": "C115",
+    "name": "名胡桃城",
+    "category": "続日本100名城",
+    "official_number": 115,
+    "prefecture": "群馬県",
+    "municipality": "利根郡みなかみ町",
+    "latitude": 36.670056,
+    "longitude": 138.992333
+  },
+  {
+    "id": "C116",
+    "name": "沼田城",
+    "category": "続日本100名城",
+    "official_number": 116,
+    "prefecture": "群馬県",
+    "municipality": "沼田市",
+    "latitude": 36.648722,
+    "longitude": 139.039028
+  },
+  {
+    "id": "C117",
+    "name": "岩櫃城",
+    "category": "続日本100名城",
+    "official_number": 117,
+    "prefecture": "群馬県",
+    "municipality": "吾妻郡東吾妻町",
+    "latitude": 36.559194,
+    "longitude": 138.804806
+  },
+  {
+    "id": "C118",
+    "name": "忍城",
+    "category": "続日本100名城",
+    "official_number": 118,
+    "prefecture": "埼玉県",
+    "municipality": "行田市",
+    "latitude": 36.13715,
+    "longitude": 139.452878
+  },
+  {
+    "id": "C119",
+    "name": "杉山城",
+    "category": "続日本100名城",
+    "official_number": 119,
+    "prefecture": "埼玉県",
+    "municipality": "比企郡嵐山町",
+    "latitude": 36.062583,
+    "longitude": 139.312139
+  },
+  {
+    "id": "C120",
+    "name": "菅谷館",
+    "category": "続日本100名城",
+    "official_number": 120,
+    "prefecture": "埼玉県",
+    "municipality": "比企郡嵐山町",
+    "latitude": 36.03556,
+    "longitude": 139.32194
+  },
+  {
+    "id": "C121",
+    "name": "本佐倉城",
+    "category": "続日本100名城",
+    "official_number": 121,
+    "prefecture": "千葉県",
+    "municipality": "印旛郡酒々井町、佐倉市",
+    "latitude": 35.727536,
+    "longitude": 140.259008
+  },
+  {
+    "id": "C122",
+    "name": "大多喜城",
+    "category": "続日本100名城",
+    "official_number": 122,
+    "prefecture": "千葉県",
+    "municipality": "夷隅郡大多喜町",
+    "latitude": 35.285883,
+    "longitude": 140.239342
+  },
+  {
+    "id": "C123",
+    "name": "滝山城",
+    "category": "続日本100名城",
+    "official_number": 123,
+    "prefecture": "東京都",
+    "municipality": "八王子市",
+    "latitude": 35.701961,
+    "longitude": 139.328292
+  },
+  {
+    "id": "C124",
+    "name": "品川台場",
+    "category": "続日本100名城",
+    "official_number": 124,
+    "prefecture": "東京都",
+    "municipality": "港区",
+    "latitude": 35.63349,
+    "longitude": 139.77188
+  },
+  {
+    "id": "C125",
+    "name": "小机城",
+    "category": "続日本100名城",
+    "official_number": 125,
+    "prefecture": "神奈川県",
+    "municipality": "横浜市",
+    "latitude": 35.512447,
+    "longitude": 139.593711
+  },
+  {
+    "id": "C126",
+    "name": "石垣山城",
+    "category": "続日本100名城",
+    "official_number": 126,
+    "prefecture": "神奈川県",
+    "municipality": "小田原市",
+    "latitude": 35.235417,
+    "longitude": 139.12778
+  },
+  {
+    "id": "C127",
+    "name": "新府城",
+    "category": "続日本100名城",
+    "official_number": 127,
+    "prefecture": "山梨県",
+    "municipality": "韮崎市",
+    "latitude": 35.73583,
+    "longitude": 138.42528
+  },
+  {
+    "id": "C128",
+    "name": "要害山城",
+    "category": "続日本100名城",
+    "official_number": 128,
+    "prefecture": "山梨県",
+    "municipality": "甲府市",
+    "latitude": 35.703036,
+    "longitude": 138.598225
+  },
+  {
+    "id": "C129",
+    "name": "龍岡城",
+    "category": "続日本100名城",
+    "official_number": 129,
+    "prefecture": "長野県",
+    "municipality": "佐久市",
+    "latitude": 36.196064,
+    "longitude": 138.50155
+  },
+  {
+    "id": "C130",
+    "name": "高島城",
+    "category": "続日本100名城",
+    "official_number": 130,
+    "prefecture": "長野県",
+    "municipality": "諏訪市",
+    "latitude": 36.039792,
+    "longitude": 138.112019
+  },
+  {
+    "id": "C131",
+    "name": "村上城",
+    "category": "続日本100名城",
+    "official_number": 131,
+    "prefecture": "新潟県",
+    "municipality": "村上市",
+    "latitude": 38.21985,
+    "longitude": 139.485
+  },
+  {
+    "id": "C132",
+    "name": "高田城",
+    "category": "続日本100名城",
+    "official_number": 132,
+    "prefecture": "新潟県",
+    "municipality": "上越市",
+    "latitude": 37.11,
+    "longitude": 138.255833
+  },
+  {
+    "id": "C133",
+    "name": "鮫ケ尾城",
+    "category": "続日本100名城",
+    "official_number": 133,
+    "prefecture": "新潟県",
+    "municipality": "妙高市",
+    "latitude": 37.051111,
+    "longitude": 138.23
+  },
+  {
+    "id": "C134",
+    "name": "富山城",
+    "category": "続日本100名城",
+    "official_number": 134,
+    "prefecture": "富山県",
+    "municipality": "富山市",
+    "latitude": 36.6933,
+    "longitude": 137.211
+  },
+  {
+    "id": "C135",
+    "name": "増山城",
+    "category": "続日本100名城",
+    "official_number": 135,
+    "prefecture": "富山県",
+    "municipality": "砺波市",
+    "latitude": 36.652147,
+    "longitude": 137.041767
+  },
+  {
+    "id": "C136",
+    "name": "鳥越城",
+    "category": "続日本100名城",
+    "official_number": 136,
+    "prefecture": "石川県",
+    "municipality": "白山市",
+    "latitude": 36.36611,
+    "longitude": 136.60111
+  },
+  {
+    "id": "C137",
+    "name": "福井城",
+    "category": "続日本100名城",
+    "official_number": 137,
+    "prefecture": "福井県",
+    "municipality": "福井市",
+    "latitude": 36.065456,
+    "longitude": 136.2209
+  },
+  {
+    "id": "C138",
+    "name": "越前大野城",
+    "category": "続日本100名城",
+    "official_number": 138,
+    "prefecture": "福井県",
+    "municipality": "大野市",
+    "latitude": 35.9866,
+    "longitude": 136.483
+  },
+  {
+    "id": "C139",
+    "name": "佐柿国吉城",
+    "category": "続日本100名城",
+    "official_number": 139,
+    "prefecture": "福井県",
+    "municipality": "三方郡美浜町",
+    "latitude": 35.6136,
+    "longitude": 135.9661
+  },
+  {
+    "id": "C140",
+    "name": "玄蕃尾城",
+    "category": "続日本100名城",
+    "official_number": 140,
+    "prefecture": "福井県",
+    "municipality": "敦賀市",
+    "latitude": 35.598389,
+    "longitude": 136.176389
+  },
+  {
+    "id": "C141",
+    "name": "郡上八幡城",
+    "category": "続日本100名城",
+    "official_number": 141,
+    "prefecture": "岐阜県",
+    "municipality": "郡上市",
+    "latitude": 35.753283,
+    "longitude": 136.961453
+  },
+  {
+    "id": "C142",
+    "name": "苗木城",
+    "category": "続日本100名城",
+    "official_number": 142,
+    "prefecture": "岐阜県",
+    "municipality": "中津川市",
+    "latitude": 35.513194,
+    "longitude": 137.48525
+  },
+  {
+    "id": "C143",
+    "name": "美濃金山城",
+    "category": "続日本100名城",
+    "official_number": 143,
+    "prefecture": "岐阜県",
+    "municipality": "可児市",
+    "latitude": 35.456647,
+    "longitude": 137.097317
+  },
+  {
+    "id": "C144",
+    "name": "大垣城",
+    "category": "続日本100名城",
+    "official_number": 144,
+    "prefecture": "岐阜県",
+    "municipality": "大垣市",
+    "latitude": 35.361978,
+    "longitude": 136.616072
+  },
+  {
+    "id": "C145",
+    "name": "興国寺城",
+    "category": "続日本100名城",
+    "official_number": 145,
+    "prefecture": "静岡県",
+    "municipality": "沼津市",
+    "latitude": 35.14145,
+    "longitude": 138.807042
+  },
+  {
+    "id": "C146",
+    "name": "諏訪原城",
+    "category": "続日本100名城",
+    "official_number": 146,
+    "prefecture": "静岡県",
+    "municipality": "島田市",
+    "latitude": 34.818039,
+    "longitude": 138.119833
+  },
+  {
+    "id": "C147",
+    "name": "高天神城",
+    "category": "続日本100名城",
+    "official_number": 147,
+    "prefecture": "静岡県",
+    "municipality": "掛川市",
+    "latitude": 34.698497,
+    "longitude": 138.035272
+  },
+  {
+    "id": "C148",
+    "name": "浜松城",
+    "category": "続日本100名城",
+    "official_number": 148,
+    "prefecture": "静岡県",
+    "municipality": "浜松市",
+    "latitude": 34.711775,
+    "longitude": 137.724908
+  },
+  {
+    "id": "C149",
+    "name": "小牧山城",
+    "category": "続日本100名城",
+    "official_number": 149,
+    "prefecture": "愛知県",
+    "municipality": "小牧市",
+    "latitude": 35.2925,
+    "longitude": 136.91361
+  },
+  {
+    "id": "C150",
+    "name": "古宮城",
+    "category": "続日本100名城",
+    "official_number": 150,
+    "prefecture": "愛知県",
+    "municipality": "新城市",
+    "latitude": 34.972444,
+    "longitude": 137.427556
+  },
+  {
+    "id": "C151",
+    "name": "吉田城",
+    "category": "続日本100名城",
+    "official_number": 151,
+    "prefecture": "愛知県",
+    "municipality": "豊橋市",
+    "latitude": 34.770147,
+    "longitude": 137.39335
+  },
+  {
+    "id": "C152",
+    "name": "津城",
+    "category": "続日本100名城",
+    "official_number": 152,
+    "prefecture": "三重県",
+    "municipality": "津市",
+    "latitude": 34.717767,
+    "longitude": 136.507658
+  },
+  {
+    "id": "C153",
+    "name": "多気北畠氏城館",
+    "category": "続日本100名城",
+    "official_number": 153,
+    "prefecture": "三重県",
+    "municipality": "津市",
+    "latitude": 34.518572,
+    "longitude": 136.298869
+  },
+  {
+    "id": "C154",
+    "name": "田丸城",
+    "category": "続日本100名城",
+    "official_number": 154,
+    "prefecture": "三重県",
+    "municipality": "度会郡玉城町",
+    "latitude": 34.49083,
+    "longitude": 136.627917
+  },
+  {
+    "id": "C155",
+    "name": "赤木城",
+    "category": "続日本100名城",
+    "official_number": 155,
+    "prefecture": "三重県",
+    "municipality": "熊野市",
+    "latitude": 33.89528,
+    "longitude": 135.95222
+  },
+  {
+    "id": "C156",
+    "name": "鎌刃城",
+    "category": "続日本100名城",
+    "official_number": 156,
+    "prefecture": "滋賀県",
+    "municipality": "米原市",
+    "latitude": 35.297056,
+    "longitude": 136.315444
+  },
+  {
+    "id": "C157",
+    "name": "八幡山城",
+    "category": "続日本100名城",
+    "official_number": 157,
+    "prefecture": "滋賀県",
+    "municipality": "近江八幡市",
+    "latitude": 35.144319,
+    "longitude": 136.082292
+  },
+  {
+    "id": "C158",
+    "name": "福知山城",
+    "category": "続日本100名城",
+    "official_number": 158,
+    "prefecture": "京都府",
+    "municipality": "福知山市",
+    "latitude": 35.296806,
+    "longitude": 135.129667
+  },
+  {
+    "id": "C159",
+    "name": "芥川山城",
+    "category": "続日本100名城",
+    "official_number": 159,
+    "prefecture": "大阪府",
+    "municipality": "高槻市",
+    "latitude": 34.88083,
+    "longitude": 135.58806
+  },
+  {
+    "id": "C160",
+    "name": "飯盛城",
+    "category": "続日本100名城",
+    "official_number": 160,
+    "prefecture": "大阪府",
+    "municipality": "大東市、四條畷市",
+    "latitude": 34.726408,
+    "longitude": 135.653667
+  },
+  {
+    "id": "C161",
+    "name": "岸和田城",
+    "category": "続日本100名城",
+    "official_number": 161,
+    "prefecture": "大阪府",
+    "municipality": "岸和田市",
+    "latitude": 34.458817,
+    "longitude": 135.370781
+  },
+  {
+    "id": "C162",
+    "name": "出石城・有子山城",
+    "category": "続日本100名城",
+    "official_number": 162,
+    "prefecture": "兵庫県",
+    "municipality": "豊岡市",
+    "latitude": 35.460433,
+    "longitude": 134.874253
+  },
+  {
+    "id": "C163",
+    "name": "黒井城",
+    "category": "続日本100名城",
+    "official_number": 163,
+    "prefecture": "兵庫県",
+    "municipality": "丹波市",
+    "latitude": 35.179167,
+    "longitude": 135.104056
+  },
+  {
+    "id": "C164",
+    "name": "洲本城",
+    "category": "続日本100名城",
+    "official_number": 164,
+    "prefecture": "兵庫県",
+    "municipality": "洲本市",
+    "latitude": 34.337703,
+    "longitude": 134.902875
+  },
+  {
+    "id": "C165",
+    "name": "大和郡山城",
+    "category": "続日本100名城",
+    "official_number": 165,
+    "prefecture": "奈良県",
+    "municipality": "大和郡山市",
+    "latitude": 34.651917,
+    "longitude": 135.778944
+  },
+  {
+    "id": "C166",
+    "name": "宇陀松山城",
+    "category": "続日本100名城",
+    "official_number": 166,
+    "prefecture": "奈良県",
+    "municipality": "宇陀市",
+    "latitude": 34.48278,
+    "longitude": 135.931167
+  },
+  {
+    "id": "C167",
+    "name": "新宮城",
+    "category": "続日本100名城",
+    "official_number": 167,
+    "prefecture": "和歌山県",
+    "municipality": "新宮市",
+    "latitude": 33.729917,
+    "longitude": 135.992472
+  },
+  {
+    "id": "C168",
+    "name": "若桜鬼ケ城",
+    "category": "続日本100名城",
+    "official_number": 168,
+    "prefecture": "鳥取県",
+    "municipality": "八頭郡若桜町",
+    "latitude": 35.336583,
+    "longitude": 134.398222
+  },
+  {
+    "id": "C169",
+    "name": "米子城",
+    "category": "続日本100名城",
+    "official_number": 169,
+    "prefecture": "鳥取県",
+    "municipality": "米子市",
+    "latitude": 35.425297,
+    "longitude": 133.323975
+  },
+  {
+    "id": "C170",
+    "name": "浜田城",
+    "category": "続日本100名城",
+    "official_number": 170,
+    "prefecture": "島根県",
+    "municipality": "浜田市",
+    "latitude": 34.902908,
+    "longitude": 132.073325
+  },
+  {
+    "id": "C171",
+    "name": "備中高松城",
+    "category": "続日本100名城",
+    "official_number": 171,
+    "prefecture": "岡山県",
+    "municipality": "岡山市",
+    "latitude": 34.693,
+    "longitude": 133.822044
+  },
+  {
+    "id": "C172",
+    "name": "三原城",
+    "category": "続日本100名城",
+    "official_number": 172,
+    "prefecture": "広島県",
+    "municipality": "三原市",
+    "latitude": 34.401283,
+    "longitude": 133.082658
+  },
+  {
+    "id": "C173",
+    "name": "新高山城",
+    "category": "続日本100名城",
+    "official_number": 173,
+    "prefecture": "広島県",
+    "municipality": "三原市",
+    "latitude": 34.420167,
+    "longitude": 132.975556
+  },
+  {
+    "id": "C174",
+    "name": "大内氏館・高嶺城",
+    "category": "続日本100名城",
+    "official_number": 174,
+    "prefecture": "山口県",
+    "municipality": "山口市",
+    "latitude": 34.184111,
+    "longitude": 131.480444
+  },
+  {
+    "id": "C175",
+    "name": "勝瑞城",
+    "category": "続日本100名城",
+    "official_number": 175,
+    "prefecture": "徳島県",
+    "municipality": "板野郡藍住町",
+    "latitude": 34.132603,
+    "longitude": 134.522933
+  },
+  {
+    "id": "C176",
+    "name": "一宮城",
+    "category": "続日本100名城",
+    "official_number": 176,
+    "prefecture": "徳島県",
+    "municipality": "徳島市",
+    "latitude": 34.034056,
+    "longitude": 134.463083
+  },
+  {
+    "id": "C177",
+    "name": "引田城",
+    "category": "続日本100名城",
+    "official_number": 177,
+    "prefecture": "香川県",
+    "municipality": "東かがわ市",
+    "latitude": 34.233261,
+    "longitude": 134.409186
+  },
+  {
+    "id": "C178",
+    "name": "能島城",
+    "category": "続日本100名城",
+    "official_number": 178,
+    "prefecture": "愛媛県",
+    "municipality": "今治市",
+    "latitude": 34.18278,
+    "longitude": 133.08083
+  },
+  {
+    "id": "C179",
+    "name": "河後森城",
+    "category": "続日本100名城",
+    "official_number": 179,
+    "prefecture": "愛媛県",
+    "municipality": "北宇和郡松野町",
+    "latitude": 33.223611,
+    "longitude": 132.708611
+  },
+  {
+    "id": "C180",
+    "name": "岡豊城",
+    "category": "続日本100名城",
+    "official_number": 180,
+    "prefecture": "高知県",
+    "municipality": "南国市",
+    "latitude": 33.594961,
+    "longitude": 133.622492
+  },
+  {
+    "id": "C181",
+    "name": "小倉城",
+    "category": "続日本100名城",
+    "official_number": 181,
+    "prefecture": "福岡県",
+    "municipality": "北九州市",
+    "latitude": 33.884444,
+    "longitude": 130.874256
+  },
+  {
+    "id": "C182",
+    "name": "水城",
+    "category": "続日本100名城",
+    "official_number": 182,
+    "prefecture": "福岡県",
+    "municipality": "太宰府市、大野城市、春日市",
+    "latitude": 33.5181,
+    "longitude": 130.4928
+  },
+  {
+    "id": "C183",
+    "name": "久留米城",
+    "category": "続日本100名城",
+    "official_number": 183,
+    "prefecture": "福岡県",
+    "municipality": "久留米市",
+    "latitude": 33.328425,
+    "longitude": 130.507772
+  },
+  {
+    "id": "C184",
+    "name": "基肄城",
+    "category": "続日本100名城",
+    "official_number": 184,
+    "prefecture": "福岡県、佐賀県",
+    "municipality": "筑紫野市、三養基郡基山町",
+    "latitude": 33.445,
+    "longitude": 130.51306
+  },
+  {
+    "id": "C185",
+    "name": "唐津城",
+    "category": "続日本100名城",
+    "official_number": 185,
+    "prefecture": "佐賀県",
+    "municipality": "唐津市",
+    "latitude": 33.453539,
+    "longitude": 129.978194
+  },
+  {
+    "id": "C186",
+    "name": "金田城",
+    "category": "続日本100名城",
+    "official_number": 186,
+    "prefecture": "長崎県",
+    "municipality": "対馬市",
+    "latitude": 34.301356,
+    "longitude": 129.273242
+  },
+  {
+    "id": "C187",
+    "name": "福江城",
+    "category": "続日本100名城",
+    "official_number": 187,
+    "prefecture": "長崎県",
+    "municipality": "五島市",
+    "latitude": 32.693472,
+    "longitude": 128.846528
+  },
+  {
+    "id": "C188",
+    "name": "原城",
+    "category": "続日本100名城",
+    "official_number": 188,
+    "prefecture": "長崎県",
+    "municipality": "南島原市",
+    "latitude": 32.633306,
+    "longitude": 130.256472
+  },
+  {
+    "id": "C189",
+    "name": "鞠智城",
+    "category": "続日本100名城",
+    "official_number": 189,
+    "prefecture": "熊本県",
+    "municipality": "山鹿市、菊池市",
+    "latitude": 33.001289,
+    "longitude": 130.788822
+  },
+  {
+    "id": "C190",
+    "name": "八代城",
+    "category": "続日本100名城",
+    "official_number": 190,
+    "prefecture": "熊本県",
+    "municipality": "八代市",
+    "latitude": 32.507456,
+    "longitude": 130.599892
+  },
+  {
+    "id": "C191",
+    "name": "中津城",
+    "category": "続日本100名城",
+    "official_number": 191,
+    "prefecture": "大分県",
+    "municipality": "中津市",
+    "latitude": 33.606633,
+    "longitude": 131.186422
+  },
+  {
+    "id": "C192",
+    "name": "角牟礼城",
+    "category": "続日本100名城",
+    "official_number": 192,
+    "prefecture": "大分県",
+    "municipality": "玖珠郡玖珠町",
+    "latitude": 33.309361,
+    "longitude": 131.1545
+  },
+  {
+    "id": "C193",
+    "name": "臼杵城",
+    "category": "続日本100名城",
+    "official_number": 193,
+    "prefecture": "大分県",
+    "municipality": "臼杵市",
+    "latitude": 33.121831,
+    "longitude": 131.804103
+  },
+  {
+    "id": "C194",
+    "name": "佐伯城",
+    "category": "続日本100名城",
+    "official_number": 194,
+    "prefecture": "大分県",
+    "municipality": "佐伯市",
+    "latitude": 32.960231,
+    "longitude": 131.889819
+  },
+  {
+    "id": "C195",
+    "name": "延岡城",
+    "category": "続日本100名城",
+    "official_number": 195,
+    "prefecture": "宮崎県",
+    "municipality": "延岡市",
+    "latitude": 32.580556,
+    "longitude": 131.662972
+  },
+  {
+    "id": "C196",
+    "name": "佐土原城",
+    "category": "続日本100名城",
+    "official_number": 196,
+    "prefecture": "宮崎県",
+    "municipality": "宮崎市",
+    "latitude": 32.047833,
+    "longitude": 131.423833
+  },
+  {
+    "id": "C197",
+    "name": "志布志城",
+    "category": "続日本100名城",
+    "official_number": 197,
+    "prefecture": "鹿児島県",
+    "municipality": "志布志市",
+    "latitude": 31.484833,
+    "longitude": 131.108917
+  },
+  {
+    "id": "C198",
+    "name": "知覧城",
+    "category": "続日本100名城",
+    "official_number": 198,
+    "prefecture": "鹿児島県",
+    "municipality": "南九州市",
+    "latitude": 31.367444,
+    "longitude": 130.443722
+  },
+  {
+    "id": "C199",
+    "name": "座喜味城",
+    "category": "続日本100名城",
+    "official_number": 199,
+    "prefecture": "沖縄県",
+    "municipality": "中頭郡読谷村",
+    "latitude": 26.408139,
+    "longitude": 127.742194
+  },
+  {
+    "id": "C200",
+    "name": "勝連城",
+    "category": "続日本100名城",
+    "official_number": 200,
+    "prefecture": "沖縄県",
+    "municipality": "うるま市",
+    "latitude": 26.330194,
+    "longitude": 127.878917
+  }
+]
