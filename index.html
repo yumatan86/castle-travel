@@ -54,6 +54,14 @@
               <option value="visited">訪問済み</option>
             </select>
           </label>
+          <p id="castle-history-note" hidden>訪問履歴がある城は訪問済みになります。</p>
+          <form id="add-visit-form" class="visit-form">
+            <h4>訪問を記録</h4>
+            <label>訪問日 <input type="date" name="date" min="0001-01-01" max="9999-12-31" required></label>
+            <label>メモ（任意） <textarea name="memo" rows="2"></textarea></label>
+            <button type="submit">訪問履歴を追加</button>
+            <p id="add-visit-message" role="status"></p>
+          </form>
         </aside>
       </div>
     </section>
@@ -126,6 +134,32 @@
           <li><span class="progress-zoku" aria-hidden="true"></span>続日本100名城・訪問済み</li>
           <li><span class="progress-unvisited" aria-hidden="true"></span>未訪問 <strong id="progress-unvisited-count"></strong></li>
         </ul>
+      </section>
+
+      <section class="visit-history" aria-labelledby="visit-history-title">
+        <h3 id="visit-history-title">訪問履歴</h3>
+        <p id="visit-history-message" role="status" tabindex="-1"></p>
+        <p id="visit-history-empty">訪問履歴はまだありません。城の詳細から追加できます。</p>
+        <ul id="visit-history-list" class="visit-history-list"></ul>
+        <template id="visit-history-item">
+          <li class="visit-history-item">
+            <h4></h4>
+            <time></time>
+            <p class="visit-history-memo"></p>
+            <div class="visit-history-actions">
+              <button type="button" class="edit-visit">編集</button>
+              <button type="button" class="delete-visit">削除</button>
+            </div>
+            <form class="visit-form" hidden>
+              <label>訪問日 <input type="date" name="date" min="0001-01-01" max="9999-12-31" required></label>
+              <label>メモ（任意） <textarea name="memo" rows="2"></textarea></label>
+              <div class="visit-history-actions">
+                <button type="submit">保存</button>
+                <button type="button" class="cancel-visit">キャンセル</button>
+              </div>
+            </form>
+          </li>
+        </template>
       </section>
     </section>
 

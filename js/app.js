@@ -76,6 +76,9 @@ const castleCategory = document.getElementById("castle-detail-category");
 const castleNumber = document.getElementById("castle-detail-number");
 const castleLocation = document.getElementById("castle-detail-location");
 const visitStatus = document.getElementById("castle-visit-status");
+const castleHistoryNote = document.getElementById("castle-history-note");
+const addVisitForm = document.getElementById("add-visit-form");
+const addVisitMessage = document.getElementById("add-visit-message");
 let selectedCastle = null;
 
 function closeCastleDetail() {
@@ -172,6 +175,141 @@ const castleListItem = document.getElementById("castle-list-item");
 const mapTab = document.querySelector('.nav-item[data-page="map-page"]');
 let castleEntries = [];
 
+// 日付のない既存の訪問済み設定と、日付付きの履歴を別々に保存する。
+const visitHistoryKey = "castle-travel.visit-history";
+const historyList = document.getElementById("visit-history-list");
+const historyEmpty = document.getElementById("visit-history-empty");
+const historyMessage = document.getElementById("visit-history-message");
+const historyItem = document.getElementById("visit-history-item");
+let visitHistory = [];
+let castlesWithHistory = new Set();
+
+function readVisitHistory() {
+  const stored = JSON.parse(localStorage.getItem(visitHistoryKey) ?? "[]");
+  const valid = Array.isArray(stored) && stored.every((entry) =>
+    entry && typeof entry.id === "string" && typeof entry.castleId === "string" &&
+    typeof entry.date === "string" && /^\d{4}-\d{2}-\d{2}$/.test(entry.date) &&
+    typeof entry.memo === "string"
+  );
+  if (!valid) throw new Error("訪問履歴の形式が不正です");
+  return stored;
+}
+
+function setVisitHistory(entries) {
+  visitHistory = entries;
+  castlesWithHistory = new Set(entries.map((entry) => entry.castleId));
+}
+
+try {
+  setVisitHistory(readVisitHistory());
+} catch (error) {
+  historyMessage.textContent = "保存済みの訪問履歴を読み込めませんでした。";
+  console.warn(error);
+}
+
+function isCastleVisited(castleId) {
+  return visitedCastles.has(castleId) || castlesWithHistory.has(castleId);
+}
+
+function updateDetailVisitStatus(castleId) {
+  visitStatus.value = isCastleVisited(castleId) ? "visited" : "unvisited";
+  visitStatus.disabled = castlesWithHistory.has(castleId);
+  castleHistoryNote.hidden = !visitStatus.disabled;
+}
+
+function saveVisitHistory(update, message) {
+  try {
+    const next = update(readVisitHistory());
+    localStorage.setItem(visitHistoryKey, JSON.stringify(next));
+    setVisitHistory(next);
+  } catch (error) {
+    message.textContent = "訪問履歴を保存できませんでした。";
+    console.warn(error);
+    return false;
+  }
+
+  for (const { castle, marker } of castleEntries) {
+    const icon = isCastleVisited(castle.id) ? visitedIcons.get(castle.category) : unvisitedIcon;
+    if (marker.options.icon !== icon) marker.setIcon(icon);
+  }
+  if (selectedCastle) updateDetailVisitStatus(selectedCastle.castle.id);
+  renderCastleProgress();
+  renderCastleList();
+  renderVisitHistory();
+  return true;
+}
+
+function visitFields(form) {
+  const data = new FormData(form);
+  return { date: data.get("date"), memo: data.get("memo").trim() };
+}
+
+addVisitForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const entry = {
+    id: crypto.randomUUID(),
+    castleId: selectedCastle.castle.id,
+    ...visitFields(addVisitForm)
+  };
+  if (saveVisitHistory((entries) => [...entries, entry], addVisitMessage)) {
+    addVisitForm.reset();
+    addVisitMessage.textContent = "訪問履歴を追加しました。";
+  }
+});
+
+function renderVisitHistory() {
+  const castleNames = new Map(castleEntries.map(({ castle }) => [castle.id, castle.name]));
+  const sorted = [...visitHistory].reverse().sort((a, b) => b.date.localeCompare(a.date));
+
+  historyList.replaceChildren(...sorted.map((entry) => {
+    const item = historyItem.content.cloneNode(true);
+    const name = castleNames.get(entry.castleId) ?? entry.castleId;
+    item.querySelector("h4").textContent = name;
+    const date = item.querySelector("time");
+    date.dateTime = entry.date;
+    date.textContent = entry.date;
+    const memo = item.querySelector(".visit-history-memo");
+    memo.textContent = entry.memo;
+    memo.hidden = !entry.memo;
+
+    const actions = item.querySelector(".visit-history-actions");
+    const edit = item.querySelector(".edit-visit");
+    const form = item.querySelector("form");
+    edit.addEventListener("click", () => {
+      form.elements.date.value = entry.date;
+      form.elements.memo.value = entry.memo;
+      actions.hidden = true;
+      form.hidden = false;
+      form.elements.date.focus();
+    });
+    form.querySelector(".cancel-visit").addEventListener("click", () => {
+      form.hidden = true;
+      actions.hidden = false;
+      edit.focus();
+    });
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const fields = visitFields(form);
+      if (saveVisitHistory((entries) => entries.map((saved) =>
+        saved.id === entry.id ? { ...saved, ...fields } : saved
+      ), historyMessage)) {
+        historyMessage.textContent = "訪問履歴を更新しました。";
+        historyMessage.focus();
+      }
+    });
+    item.querySelector(".delete-visit").addEventListener("click", () => {
+      if (!window.confirm(`${name}（${entry.date}）の訪問履歴を削除しますか？`)) return;
+      if (saveVisitHistory((entries) => entries.filter((saved) => saved.id !== entry.id), historyMessage)) {
+        historyMessage.textContent = "訪問履歴を削除しました。";
+        historyMessage.focus();
+      }
+    });
+    return item;
+  }));
+
+  historyEmpty.hidden = sorted.length > 0;
+}
+
 function renderCastleProgress() {
   const entries = [
     ["全体", castleEntries],
@@ -184,7 +322,7 @@ function renderCastleProgress() {
   const stats = entries.map(([label, group]) => ({
     label,
     total: group.length,
-    visited: group.filter(({ castle }) => visitedCastles.has(castle.id)).length
+    visited: group.filter(({ castle }) => isCastleVisited(castle.id)).length
   }));
 
   castleProgress.replaceChildren(...stats.map(({ label, total, visited }) => {
@@ -218,7 +356,7 @@ function renderCastleList() {
   let count = 0;
 
   for (const { castle, marker } of castleEntries) {
-    const state = visitedCastles.has(castle.id) ? "visited" : "unvisited";
+    const state = isCastleVisited(castle.id) ? "visited" : "unvisited";
     if (query && !castle.name.normalize("NFKC").toLowerCase().includes(query)) continue;
     if (categoryFilter.value && castle.category !== categoryFilter.value) continue;
     if (prefectureFilter.value && castle.prefecture !== prefectureFilter.value) continue;
@@ -272,7 +410,7 @@ fetch("data/castle.json")
   .then((castles) => {
     castleEntries = castles.map((castle) => {
       const marker = L.marker([castle.latitude, castle.longitude], {
-        icon: visitedCastles.has(castle.id) ? visitedIcons.get(castle.category) : unvisitedIcon,
+        icon: isCastleVisited(castle.id) ? visitedIcons.get(castle.category) : unvisitedIcon,
         title: castle.name
       }).addTo(castleLayers.get(castle.category).layer);
 
@@ -282,7 +420,9 @@ fetch("data/castle.json")
         castleCategory.textContent = castle.category;
         castleNumber.textContent = castle.official_number;
         castleLocation.textContent = `${castle.prefecture}${castle.municipality}`;
-        visitStatus.value = visitedCastles.has(castle.id) ? "visited" : "unvisited";
+        updateDetailVisitStatus(castle.id);
+        addVisitForm.reset();
+        addVisitMessage.textContent = "";
         castleDetail.hidden = false;
         castleName.focus({ preventScroll: true });
       });
@@ -301,6 +441,7 @@ fetch("data/castle.json")
     renderCastleProgress();
     castleProgress.parentElement.hidden = false;
     renderCastleList();
+    renderVisitHistory();
   })
   .catch((error) => {
     castleListStatus.textContent = "城データを読み込めませんでした。";

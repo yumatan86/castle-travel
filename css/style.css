@@ -360,6 +360,90 @@ main p {
 }
 
 /* =========================
+   訪問履歴の入力と一覧
+========================= */
+
+.visit-history {
+  margin-top: 24px;
+}
+
+.visit-history h3,
+.visit-history h4,
+.visit-form h4 {
+  margin: 0 0 6px;
+}
+
+.visit-form {
+  margin-top: 12px;
+}
+
+.visit-form label {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.visit-form input,
+.visit-form textarea {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 8px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+  color: inherit;
+  font: inherit;
+  font-size: 16px;
+}
+
+.visit-form textarea {
+  resize: vertical;
+}
+
+.visit-history-list {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.visit-history-item {
+  padding: 16px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.visit-history-item time {
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+.visit-history-memo {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.visit-history-actions:not([hidden]) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.visit-history-actions button {
+  min-height: 44px;
+  padding: 6px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+  color: inherit;
+}
+
+/* =========================
    城一覧の絞り込みと表示
 ========================= */
 
