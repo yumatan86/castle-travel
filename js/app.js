@@ -1,42 +1,36 @@
-
 // =========================
-// 画面切り替え機能
+// 画面切り替え
 // =========================
 
 const navItems = document.querySelectorAll(".nav-item");
 const pages = document.querySelectorAll(".page");
 
-// ナビゲーションをクリックしたとき
 navItems.forEach((item) => {
   item.addEventListener("click", () => {
 
-    // 選択された画面のIDを取得
     const targetPage = item.dataset.page;
 
     // すべての画面を非表示にする
     pages.forEach((page) => {
       page.classList.remove("active");
     });
-
-    // 選択された画面だけ表示
     document.getElementById(targetPage).classList.add("active");
 
     // ナビゲーションの選択状態を更新
     navItems.forEach((nav) => {
       nav.classList.remove("active");
     });
-
     item.classList.add("active");
   });
 });
 
 // =========================
-// 地図表示機能
+// 地図の初期化
 // =========================
 
-// 地図を作成
 const mapElement = document.getElementById("map");
 const map = L.map(mapElement).setView([36.5, 137.5], 5);
+// 詳細パネルや画面切り替えで地図の表示領域が変わったら再計算する
 const mapResizeObserver = new ResizeObserver(() => {
   if (mapElement.clientWidth && mapElement.clientHeight) {
     map.invalidateSize();
@@ -44,17 +38,16 @@ const mapResizeObserver = new ResizeObserver(() => {
 });
 mapResizeObserver.observe(mapElement);
 
-// 地図のタイル画像を読み込む
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
 // =========================
-// 城のマーカー表示
+// 訪問状況の保存と復元
 // =========================
 
-// 区分ごとにマーカーをまとめ、チェック状態に合わせて地図に表示する
 const castleLayers = new Map();
+
 const visitedCastlesKey = "castle-travel.visited-castles";
 let visitedCastles = new Set();
 try {
@@ -72,6 +65,11 @@ function readVisitedCastles() {
     return new Set();
   }
 }
+
+// =========================
+// 城の詳細と訪問状況の変更
+// =========================
+
 const castleDetail = document.getElementById("castle-detail");
 const castleName = document.getElementById("castle-detail-name");
 const castleCategory = document.getElementById("castle-detail-category");
@@ -117,6 +115,10 @@ visitStatus.addEventListener("change", () => {
   }
 });
 
+// =========================
+// 区分別のマーカーレイヤーとアイコン
+// =========================
+
 document.querySelectorAll(".map-filters input").forEach((filter) => {
   const layer = L.layerGroup();
   castleLayers.set(filter.value, { filter, layer, updateLayer });
@@ -150,6 +152,10 @@ const visitedIcons = new Map([
   ["日本100名城", createCastleIcon("castle-marker castle-marker--visited-100")],
   ["続日本100名城", createCastleIcon("castle-marker castle-marker--visited-zoku")]
 ]);
+
+// =========================
+// 城一覧と訪問達成率
+// =========================
 
 const castleSearch = document.getElementById("castle-search");
 const categoryFilter = document.getElementById("castle-category-filter");
@@ -222,6 +228,7 @@ function renderCastleList() {
     item.querySelector(".castle-list-name").textContent = castle.name;
     item.querySelector(".castle-list-location").textContent = `${castle.prefecture}${castle.municipality}`;
     item.querySelector(".castle-list-category").textContent = `${castle.category}・第${castle.official_number}番`;
+
     const badge = item.querySelector(".castle-list-visit-status");
     const isVisited = state === "visited";
     badge.dataset.state = state;
@@ -230,6 +237,7 @@ function renderCastleList() {
     }
     badge.querySelector(".castle-list-visit-icon").textContent = isVisited ? "✓" : "○";
     badge.querySelector(".castle-list-visit-label").textContent = isVisited ? "訪問済み" : "未訪問";
+
     const button = item.querySelector("button");
     button.setAttribute("aria-label", `${castle.name}を地図で見る`);
     button.addEventListener("click", () => {
@@ -249,6 +257,10 @@ function renderCastleList() {
   castleList.replaceChildren(results);
   castleListStatus.textContent = count ? `${count}城を表示` : "条件に一致する城はありません。";
 }
+
+// =========================
+// 城データの読み込みと各画面の初期表示
+// =========================
 
 fetch("data/castle.json")
   .then((response) => {
