@@ -450,6 +450,11 @@ main p {
   text-align: center;
 }
 
+.castle-list-visit-label {
+  inline-size: 4em;
+  text-align: center;
+}
+
 /* =========================
    下部ナビゲーション
 ========================= */
