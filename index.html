@@ -33,7 +33,30 @@
           続日本100名城
         </label>
       </div>
-      <div id="map"></div>
+      <div class="map-layout">
+        <div id="map"></div>
+        <aside id="castle-detail" class="castle-detail" aria-labelledby="castle-detail-name" hidden>
+          <div class="castle-detail-header">
+            <h3 id="castle-detail-name" tabindex="-1"></h3>
+            <button id="close-castle-detail" type="button">閉じる</button>
+          </div>
+          <dl>
+            <dt>区分</dt>
+            <dd id="castle-detail-category"></dd>
+            <dt>公式番号</dt>
+            <dd id="castle-detail-number"></dd>
+            <dt>所在地</dt>
+            <dd id="castle-detail-location"></dd>
+          </dl>
+          <label class="castle-visit-status">
+            訪問状況
+            <select id="castle-visit-status">
+              <option value="unvisited">未訪問</option>
+              <option value="visited">訪問済み</option>
+            </select>
+          </label>
+        </aside>
+      </div>
     </section>
 
     <!-- 城一覧画面 -->
