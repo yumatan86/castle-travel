@@ -46,10 +46,24 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 // 城のマーカー表示
 // =========================
 
-// JSONファイルから城データを読み込む
-// =========================
-// オリジナルマーカー
-// =========================
+// 区分ごとにマーカーをまとめ、チェック状態に合わせて地図に表示する
+const castleLayers = new Map();
+
+document.querySelectorAll(".map-filters input").forEach((filter) => {
+  const layer = L.layerGroup();
+  castleLayers.set(filter.value, layer);
+
+  function updateLayer() {
+    if (filter.checked) {
+      layer.addTo(map);
+    } else {
+      layer.remove();
+    }
+  }
+
+  filter.addEventListener("change", updateLayer);
+  updateLayer();
+});
 
 const unvisitedIcon = L.divIcon({
   className: "castle-marker",
@@ -66,23 +80,13 @@ fetch("data/castle.json")
     return response.json();
   })
   .then((castles) => {
-
-    // 城データを1件ずつ処理
     castles.forEach((castle) => {
-
-      // 緯度・経度を使ってマーカーを配置
-      L.marker([castle.latitude, castle.longitude], {
-  icon: unvisitedIcon
-})
-  .addTo(map)
+      L.marker([castle.latitude, castle.longitude], { icon: unvisitedIcon })
         .bindPopup(
           `<strong>${castle.name}</strong><br>${castle.prefecture}<br>${castle.category}`
-        );
-
+        )
+        .addTo(castleLayers.get(castle.category));
     });
-
-    console.log(`${castles.length}城のマーカーを表示しました`);
-
   })
   .catch((error) => {
     console.error("城データの読み込みエラー:", error);
