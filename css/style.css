@@ -211,3 +211,21 @@ body {
   min-height: 300px;
 }
 }
+
+/* =========================
+   城のマーカー
+========================= */
+
+.castle-marker {
+  background: transparent;
+  border: none;
+}
+
+.castle-marker-dot {
+  width: 24px;
+  height: 24px;
+  background: #FFFFFF;
+  border: 3px solid #8B929A;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}

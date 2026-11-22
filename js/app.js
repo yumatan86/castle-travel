@@ -47,6 +47,17 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 // =========================
 
 // JSONファイルから城データを読み込む
+// =========================
+// オリジナルマーカー
+// =========================
+
+const unvisitedIcon = L.divIcon({
+  className: "castle-marker",
+  html: '<div class="castle-marker-dot"></div>',
+  iconSize: [24, 24],
+  iconAnchor: [12, 12],
+  popupAnchor: [0, -12]
+});
 fetch("data/castle.json")
   .then((response) => {
     if (!response.ok) {
@@ -60,8 +71,10 @@ fetch("data/castle.json")
     castles.forEach((castle) => {
 
       // 緯度・経度を使ってマーカーを配置
-      L.marker([castle.latitude, castle.longitude])
-        .addTo(map)
+      L.marker([castle.latitude, castle.longitude], {
+  icon: unvisitedIcon
+})
+  .addTo(map)
         .bindPopup(
           `<strong>${castle.name}</strong><br>${castle.prefecture}<br>${castle.category}`
         );
