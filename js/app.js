@@ -184,14 +184,17 @@ const historyItem = document.getElementById("visit-history-item");
 let visitHistory = [];
 let castlesWithHistory = new Set();
 
-function readVisitHistory() {
-  const stored = JSON.parse(localStorage.getItem(visitHistoryKey) ?? "[]");
-  const valid = Array.isArray(stored) && stored.every((entry) =>
+function isVisitHistory(entries) {
+  return Array.isArray(entries) && entries.every((entry) =>
     entry && typeof entry.id === "string" && typeof entry.castleId === "string" &&
     typeof entry.date === "string" && /^\d{4}-\d{2}-\d{2}$/.test(entry.date) &&
     typeof entry.memo === "string"
   );
-  if (!valid) throw new Error("訪問履歴の形式が不正です");
+}
+
+function readVisitHistory() {
+  const stored = JSON.parse(localStorage.getItem(visitHistoryKey) ?? "[]");
+  if (!isVisitHistory(stored)) throw new Error("訪問履歴の形式が不正です");
   return stored;
 }
 
@@ -228,6 +231,11 @@ function saveVisitHistory(update, message) {
     return false;
   }
 
+  refreshVisitViews();
+  return true;
+}
+
+function refreshVisitViews() {
   for (const { castle, marker } of castleEntries) {
     const icon = isCastleVisited(castle.id) ? visitedIcons.get(castle.category) : unvisitedIcon;
     if (marker.options.icon !== icon) marker.setIcon(icon);
@@ -236,7 +244,6 @@ function saveVisitHistory(update, message) {
   renderCastleProgress();
   renderCastleList();
   renderVisitHistory();
-  return true;
 }
 
 function visitFields(form) {
@@ -395,6 +402,112 @@ function renderCastleList() {
   castleList.replaceChildren(results);
   castleListStatus.textContent = count ? `${count}城を表示` : "条件に一致する城はありません。";
 }
+
+// =========================
+// 訪問データのバックアップ
+// =========================
+
+const backupVersion = 1;
+const backupMessage = document.getElementById("backup-message");
+const backupFile = document.getElementById("backup-file");
+const importBackupForm = document.getElementById("import-backup");
+
+document.getElementById("export-backup").addEventListener("click", () => {
+  try {
+    const backup = {
+      version: backupVersion,
+      visitedCastles: [...readVisitedCastles()],
+      visitHistory: readVisitHistory()
+    };
+    const blob = new Blob([JSON.stringify(backup, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "castle-travel-backup.json";
+    document.body.append(link);
+    link.click();
+    link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    backupMessage.textContent = "バックアップのダウンロードを開始しました。";
+  } catch (error) {
+    backupMessage.textContent = "バックアップを書き出せませんでした。";
+    console.warn(error);
+  }
+});
+
+function isCastleBackup(backup) {
+  return backup?.version === backupVersion &&
+    Array.isArray(backup.visitedCastles) &&
+    backup.visitedCastles.every((id) => typeof id === "string" && id.length > 0) &&
+    isVisitHistory(backup.visitHistory) &&
+    backup.visitHistory.every(({ id, castleId, date }) => {
+      const parsed = new Date(date);
+      return id.length > 0 && castleId.length > 0 && date >= "0001-01-01" &&
+        Number.isFinite(parsed.getTime()) && parsed.toISOString().slice(0, 10) === date;
+    });
+}
+
+function mergeCastleBackup(backup) {
+  const previousVisited = localStorage.getItem(visitedCastlesKey);
+  const visited = readVisitedCastles();
+  const history = new Map(readVisitHistory().map((entry) => [entry.id, entry]));
+  const previousVisitedCount = visited.size;
+  const previousHistoryCount = history.size;
+
+  for (const id of backup.visitedCastles) visited.add(id);
+  for (const { id, castleId, date, memo } of backup.visitHistory) {
+    if (!history.has(id)) history.set(id, { id, castleId, date, memo });
+  }
+  const entries = [...history.values()];
+
+  localStorage.setItem(visitedCastlesKey, JSON.stringify([...visited]));
+  try {
+    localStorage.setItem(visitHistoryKey, JSON.stringify(entries));
+  } catch (error) {
+    // 履歴の保存に失敗した場合は、先に書き込んだ訪問済み設定も元に戻す。
+    if (previousVisited === null) {
+      localStorage.removeItem(visitedCastlesKey);
+    } else {
+      localStorage.setItem(visitedCastlesKey, previousVisited);
+    }
+    throw error;
+  }
+
+  visitedCastles = visited;
+  setVisitHistory(entries);
+  refreshVisitViews();
+  return { visited: visited.size - previousVisitedCount, history: history.size - previousHistoryCount };
+}
+
+importBackupForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  const file = backupFile.files[0];
+  if (!file) return;
+
+  const submitButton = importBackupForm.querySelector("button");
+  submitButton.disabled = true;
+  backupMessage.textContent = "";
+  try {
+    const backup = JSON.parse(await file.text());
+    if (!isCastleBackup(backup)) {
+      backupMessage.textContent = "対応する城巡りのバックアップファイルを選んでください。";
+      return;
+    }
+
+    const added = mergeCastleBackup(backup);
+    backupMessage.textContent = added.visited || added.history
+      ? `読み込み完了。訪問済みの設定 ${added.visited}件、訪問履歴 ${added.history}件を追加しました。`
+      : "読み込み完了。追加する記録はありませんでした。";
+  } catch (error) {
+    backupMessage.textContent = error instanceof SyntaxError
+      ? "JSONファイルを読み込めませんでした。"
+      : "バックアップを取り込めませんでした。";
+    console.warn(error);
+  } finally {
+    importBackupForm.reset();
+    submitButton.disabled = false;
+  }
+});
 
 // =========================
 // 城データの読み込みと各画面の初期表示

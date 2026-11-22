@@ -166,7 +166,18 @@
     <!-- 設定画面 -->
     <section id="settings-page" class="page">
       <h2>設定</h2>
-      <p>サイトの各種設定を管理します。</p>
+      <section class="backup-panel" aria-labelledby="backup-title">
+        <h3 id="backup-title">訪問データのバックアップ</h3>
+        <p>訪問済みの設定、訪問日、メモをJSONファイルに保存できます。</p>
+        <button id="export-backup" type="button">バックアップを書き出す</button>
+        <form id="import-backup" class="visit-form">
+          <label for="backup-file">復元するバックアップファイル</label>
+          <input id="backup-file" type="file" accept=".json,application/json" required>
+          <p>読み込んだ記録は現在のデータに追加されます。同じ履歴がある場合は現在の内容を優先します。</p>
+          <button type="submit">バックアップを読み込む</button>
+        </form>
+        <p id="backup-message" role="status"></p>
+      </section>
     </section>
 
   </main>
