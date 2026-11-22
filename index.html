@@ -62,7 +62,55 @@
     <!-- 城一覧画面 -->
     <section id="castle-page" class="page">
       <h2>城一覧</h2>
-      <p>日本100名城・続日本100名城を探す。</p>
+      <section class="castle-progress" aria-labelledby="castle-progress-title" hidden>
+        <h3 id="castle-progress-title">訪問達成率</h3>
+        <dl id="castle-progress"></dl>
+      </section>
+
+      <div class="castle-list-filters" role="group" aria-label="城一覧の絞り込み">
+        <div>
+          <label for="castle-search">城名</label>
+          <input id="castle-search" type="search" placeholder="例：姫路城">
+        </div>
+        <div>
+          <label for="castle-category-filter">区分</label>
+          <select id="castle-category-filter">
+            <option value="">すべて</option>
+            <option>日本100名城</option>
+            <option>続日本100名城</option>
+          </select>
+        </div>
+        <div>
+          <label for="castle-prefecture-filter">都道府県</label>
+          <select id="castle-prefecture-filter">
+            <option value="">すべて</option>
+          </select>
+        </div>
+        <div>
+          <label for="castle-status-filter">訪問状況</label>
+          <select id="castle-status-filter">
+            <option value="">すべて</option>
+            <option value="visited">訪問済み</option>
+            <option value="unvisited">未訪問</option>
+          </select>
+        </div>
+      </div>
+
+      <p id="castle-list-status" role="status">城データを読み込み中です。</p>
+      <ul id="castle-list" class="castle-list"></ul>
+      <template id="castle-list-item">
+        <li class="castle-list-item">
+          <div>
+            <h3 class="castle-list-name"></h3>
+            <p class="castle-list-location"></p>
+            <p class="castle-list-category"></p>
+          </div>
+          <div class="castle-list-actions">
+            <span class="castle-list-visit-status"></span>
+            <button type="button">地図で見る</button>
+          </div>
+        </li>
+      </template>
     </section>
 
     <!-- 記録画面 -->

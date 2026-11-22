@@ -100,6 +100,8 @@ visitStatus.addEventListener("change", () => {
     visitedCastles.delete(castle.id);
   }
   marker.setIcon(isVisited ? visitedIcons.get(castle.category) : unvisitedIcon);
+  renderCastleProgress();
+  renderCastleList();
 
   try {
     // 別のタブで保存した城の訪問状況も残す
@@ -117,7 +119,7 @@ visitStatus.addEventListener("change", () => {
 
 document.querySelectorAll(".map-filters input").forEach((filter) => {
   const layer = L.layerGroup();
-  castleLayers.set(filter.value, layer);
+  castleLayers.set(filter.value, { filter, layer, updateLayer });
 
   function updateLayer() {
     if (filter.checked) {
@@ -149,6 +151,76 @@ const visitedIcons = new Map([
   ["続日本100名城", createCastleIcon("castle-marker castle-marker--visited-zoku")]
 ]);
 
+const castleSearch = document.getElementById("castle-search");
+const categoryFilter = document.getElementById("castle-category-filter");
+const prefectureFilter = document.getElementById("castle-prefecture-filter");
+const statusFilter = document.getElementById("castle-status-filter");
+const castleProgress = document.getElementById("castle-progress");
+const castleListStatus = document.getElementById("castle-list-status");
+const castleList = document.getElementById("castle-list");
+const castleListItem = document.getElementById("castle-list-item");
+const mapTab = document.querySelector('.nav-item[data-page="map-page"]');
+let castleEntries = [];
+
+function renderCastleProgress() {
+  const entries = [
+    ["全体", castleEntries],
+    ...Array.from(castleLayers.keys(), (category) => [
+      category,
+      castleEntries.filter(({ castle }) => castle.category === category)
+    ])
+  ];
+
+  castleProgress.replaceChildren(...entries.map(([label, group]) => {
+    const visited = group.filter(({ castle }) => visitedCastles.has(castle.id)).length;
+    const percent = group.length ? 100 * visited / group.length : 0;
+    const item = document.createElement("div");
+    const name = document.createElement("dt");
+    const value = document.createElement("dd");
+    name.textContent = label;
+    value.textContent = `${visited} / ${group.length}城（${percent}%）`;
+    item.append(name, value);
+    return item;
+  }));
+}
+
+function renderCastleList() {
+  const query = castleSearch.value.trim().normalize("NFKC").toLowerCase();
+  const results = document.createDocumentFragment();
+  let count = 0;
+
+  for (const { castle, marker } of castleEntries) {
+    const state = visitedCastles.has(castle.id) ? "visited" : "unvisited";
+    if (query && !castle.name.normalize("NFKC").toLowerCase().includes(query)) continue;
+    if (categoryFilter.value && castle.category !== categoryFilter.value) continue;
+    if (prefectureFilter.value && castle.prefecture !== prefectureFilter.value) continue;
+    if (statusFilter.value && state !== statusFilter.value) continue;
+
+    const item = castleListItem.content.cloneNode(true);
+    item.querySelector(".castle-list-name").textContent = castle.name;
+    item.querySelector(".castle-list-location").textContent = `${castle.prefecture}${castle.municipality}`;
+    item.querySelector(".castle-list-category").textContent = `${castle.category}・第${castle.official_number}番`;
+    item.querySelector(".castle-list-visit-status").textContent = state === "visited" ? "訪問済み" : "未訪問";
+    const button = item.querySelector("button");
+    button.setAttribute("aria-label", `${castle.name}を地図で見る`);
+    button.addEventListener("click", () => {
+      const { filter, updateLayer } = castleLayers.get(castle.category);
+      filter.checked = true;
+      updateLayer();
+      mapTab.click();
+      marker.fire("click");
+      map.invalidateSize({ pan: false });
+      map.setView(marker.getLatLng(), Math.max(map.getZoom(), 8), { animate: false });
+      window.scrollTo(0, 0);
+    });
+    results.append(item);
+    count += 1;
+  }
+
+  castleList.replaceChildren(results);
+  castleListStatus.textContent = count ? `${count}城を表示` : "条件に一致する城はありません。";
+}
+
 fetch("data/castle.json")
   .then((response) => {
     if (!response.ok) {
@@ -157,11 +229,11 @@ fetch("data/castle.json")
     return response.json();
   })
   .then((castles) => {
-    castles.forEach((castle) => {
+    castleEntries = castles.map((castle) => {
       const marker = L.marker([castle.latitude, castle.longitude], {
         icon: visitedCastles.has(castle.id) ? visitedIcons.get(castle.category) : unvisitedIcon,
         title: castle.name
-      }).addTo(castleLayers.get(castle.category));
+      }).addTo(castleLayers.get(castle.category).layer);
 
       marker.on("click", () => {
         selectedCastle = { castle, marker };
@@ -173,8 +245,23 @@ fetch("data/castle.json")
         castleDetail.hidden = false;
         castleName.focus({ preventScroll: true });
       });
+      return { castle, marker };
     });
+
+    const prefectures = new Set(castles.map((castle) => castle.prefecture));
+    for (const prefecture of prefectures) {
+      prefectureFilter.add(new Option(prefecture));
+    }
+
+    castleSearch.addEventListener("input", renderCastleList);
+    for (const filter of [categoryFilter, prefectureFilter, statusFilter]) {
+      filter.addEventListener("change", renderCastleList);
+    }
+    renderCastleProgress();
+    castleProgress.parentElement.hidden = false;
+    renderCastleList();
   })
   .catch((error) => {
+    castleListStatus.textContent = "城データを読み込めませんでした。";
     console.error("城データの読み込みエラー:", error);
   });

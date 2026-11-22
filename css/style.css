@@ -246,6 +246,91 @@ main p {
   overflow: hidden;
 }
 
+.castle-progress {
+  padding: 16px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.castle-progress h3,
+.castle-list-name {
+  margin: 0;
+  font-size: 17px;
+}
+
+.castle-progress dl,
+.castle-list-filters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
+  gap: 12px;
+}
+
+.castle-progress dl {
+  margin: 12px 0 0;
+}
+
+.castle-progress dd {
+  margin: 4px 0 0;
+  font-weight: 700;
+}
+
+.castle-list-filters {
+  margin: 20px 0 12px;
+}
+
+.castle-list-filters > div {
+  display: grid;
+  gap: 4px;
+  font-size: 14px;
+}
+
+.castle-list-filters input,
+.castle-list-filters select,
+.castle-list-actions button {
+  width: 100%;
+  min-height: 44px;
+  padding: 6px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+  color: inherit;
+  font: inherit;
+  font-size: 16px;
+}
+
+.castle-list {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.castle-list-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px 16px;
+  padding: 12px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.castle-list-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.castle-list-actions button {
+  width: auto;
+}
+
 /* =========================
    Bottom Navigation
 ========================= */
