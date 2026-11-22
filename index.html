@@ -62,11 +62,6 @@
     <!-- 城一覧画面 -->
     <section id="castle-page" class="page">
       <h2>城一覧</h2>
-      <section class="castle-progress" aria-labelledby="castle-progress-title" hidden>
-        <h3 id="castle-progress-title">訪問達成率</h3>
-        <dl id="castle-progress"></dl>
-      </section>
-
       <div class="castle-list-filters" role="group" aria-label="城一覧の絞り込み">
         <div>
           <label for="castle-search">城名</label>
@@ -116,7 +111,20 @@
     <!-- 記録画面 -->
     <section id="record-page" class="page">
       <h2>訪問記録</h2>
-      <p>これまでの城巡りの成果を確認できます。</p>
+      <section class="castle-progress" aria-labelledby="castle-progress-title" hidden>
+        <h3 id="castle-progress-title">訪問達成率</h3>
+        <dl id="castle-progress"></dl>
+        <div class="castle-progress-meter" aria-hidden="true">
+          <span class="progress-100" id="progress-100"></span>
+          <span class="progress-zoku" id="progress-zoku"></span>
+          <span class="progress-unvisited" id="progress-unvisited"></span>
+        </div>
+        <ul class="castle-progress-legend" aria-label="メーターの凡例">
+          <li><span class="progress-100" aria-hidden="true"></span>日本100名城・訪問済み</li>
+          <li><span class="progress-zoku" aria-hidden="true"></span>続日本100名城・訪問済み</li>
+          <li><span class="progress-unvisited" aria-hidden="true"></span>未訪問 <strong id="progress-unvisited-count"></strong></li>
+        </ul>
+      </section>
     </section>
 
     <!-- 設定画面 -->

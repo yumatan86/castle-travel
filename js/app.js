@@ -156,6 +156,10 @@ const categoryFilter = document.getElementById("castle-category-filter");
 const prefectureFilter = document.getElementById("castle-prefecture-filter");
 const statusFilter = document.getElementById("castle-status-filter");
 const castleProgress = document.getElementById("castle-progress");
+const progress100 = document.getElementById("progress-100");
+const progressZoku = document.getElementById("progress-zoku");
+const progressUnvisited = document.getElementById("progress-unvisited");
+const progressUnvisitedCount = document.getElementById("progress-unvisited-count");
 const castleListStatus = document.getElementById("castle-list-status");
 const castleList = document.getElementById("castle-list");
 const castleListItem = document.getElementById("castle-list-item");
@@ -171,17 +175,35 @@ function renderCastleProgress() {
     ])
   ];
 
-  castleProgress.replaceChildren(...entries.map(([label, group]) => {
-    const visited = group.filter(({ castle }) => visitedCastles.has(castle.id)).length;
-    const percent = group.length ? 100 * visited / group.length : 0;
+  const stats = entries.map(([label, group]) => ({
+    label,
+    total: group.length,
+    visited: group.filter(({ castle }) => visitedCastles.has(castle.id)).length
+  }));
+
+  castleProgress.replaceChildren(...stats.map(({ label, total, visited }) => {
+    const percent = total ? 100 * visited / total : 0;
     const item = document.createElement("div");
     const name = document.createElement("dt");
     const value = document.createElement("dd");
+    const rate = document.createElement("span");
+    const count = document.createElement("span");
     name.textContent = label;
-    value.textContent = `${visited} / ${group.length}城（${percent}%）`;
+    rate.className = "castle-progress-rate";
+    rate.textContent = `${percent}%`;
+    count.className = "castle-progress-count";
+    count.textContent = `${visited} / ${total}城`;
+    value.append(rate, count);
     item.append(name, value);
     return item;
   }));
+
+  const [overall, regular, sequel] = stats;
+  const unvisited = overall.total - overall.visited;
+  progress100.style.flexGrow = regular.visited;
+  progressZoku.style.flexGrow = sequel.visited;
+  progressUnvisited.style.flexGrow = unvisited;
+  progressUnvisitedCount.textContent = `${unvisited}城`;
 }
 
 function renderCastleList() {

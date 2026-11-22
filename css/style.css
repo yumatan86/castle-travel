@@ -247,10 +247,11 @@ main p {
 }
 
 .castle-progress {
-  padding: 16px;
+  padding: clamp(16px, 4vw, 32px);
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(37, 42, 48, 0.06);
 }
 
 .castle-progress h3,
@@ -267,12 +268,90 @@ main p {
 }
 
 .castle-progress dl {
-  margin: 12px 0 0;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 16px 0 20px;
+}
+
+.castle-progress dl > div {
+  padding: 12px;
+  background: var(--color-bg);
+  border-radius: 8px;
+}
+
+.castle-progress dt {
+  font-size: 13px;
 }
 
 .castle-progress dd {
   margin: 4px 0 0;
+}
+
+.castle-progress-rate {
+  display: block;
+  font-size: clamp(20px, 4vw, 28px);
   font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.castle-progress-count,
+.castle-progress-legend {
+  font-size: 13px;
+}
+
+.castle-progress-meter {
+  display: flex;
+  height: 16px;
+  overflow: hidden;
+  background: #D8DDE2;
+  border-radius: 999px;
+}
+
+.castle-progress-meter span {
+  flex-basis: 0;
+}
+
+.progress-100 {
+  background: var(--color-blue);
+}
+
+.progress-zoku {
+  background: var(--color-orange);
+}
+
+.progress-unvisited {
+  background: #D8DDE2;
+}
+
+.castle-progress-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.castle-progress-legend li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.castle-progress-legend span {
+  flex: 0 0 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+@media (max-width: 600px) {
+  .castle-progress dl {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .castle-progress dl > div:first-child {
+    grid-column: 1 / -1;
+  }
 }
 
 .castle-list-filters {
